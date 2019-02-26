@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800" ResizeMode="NoResize">
-    <Grid HorizontalAlignment="Left" Height="600" Margin="49,54,0,0" VerticalAlignment="Top" Width="600">
+    <Grid Name="SudokuGrid" HorizontalAlignment="Left" Height="600" Margin="49,54,0,0" VerticalAlignment="Top" Width="600">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -29,87 +29,87 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox Name="B1" Grid.Row="0" Grid.Column="0" Background="#FF0AB3E7"></TextBox>
+        <TextBox IsReadOnly="True"  Text="5" FontSize="50" Name="B1" Grid.Row="0" Grid.Column="0" Background="#FF0AB3E7" TextChanged="B1_TextChanged_1"></TextBox>
         <TextBox Name="B2" Grid.Row="0" Grid.Column="1" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B3" Grid.Row="0" Grid.Column="2" Background="#FF0AB3E7"></TextBox>
-        <TextBox Name="B4" Grid.Row="0" Grid.Column="3" Background="#FF0AB3E7"></TextBox>
+        <TextBox IsReadOnly="True" Text ="1" FontSize="50"  Name="B4" Grid.Row="0" Grid.Column="3" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B5" Grid.Row="0" Grid.Column="4" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B6" Grid.Row="0" Grid.Column="5" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B7" Grid.Row="0" Grid.Column="6" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B8" Grid.Row="0" Grid.Column="7" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B9" Grid.Row="0" Grid.Column="8" Background="#FF0AB3E7"></TextBox>
         <TextBox Name="B10" Grid.Row="1" Grid.Column="0" Background="#FF37BAE2"></TextBox>
-        <TextBox Name="B11" Grid.Row="1" Grid.Column="1" Background="#FF37BAE2"></TextBox>
-        <TextBox Name="B12" Grid.Row="1" Grid.Column="2" Background="#FF37BAE2"></TextBox>
+        <TextBox IsReadOnly="True" Text="9" FontSize="50" Name="B11" Grid.Row="1" Grid.Column="1" Background="#FF37BAE2"></TextBox>
+        <TextBox IsReadOnly="True" Text="6" FontSize="50" Name="B12" Grid.Row="1" Grid.Column="2" Background="#FF37BAE2"></TextBox>
         <TextBox Name="B13" Grid.Row="1" Grid.Column="3" Background="#FF37BAE2"></TextBox>
         <TextBox Name="B14" Grid.Row="1" Grid.Column="4" Background="#FF37BAE2"></TextBox>
         <TextBox Name="B15" Grid.Row="1" Grid.Column="5" Background="#FF37BAE2"></TextBox>
-        <TextBox Name="B16" Grid.Row="1" Grid.Column="6" Background="#FF37BAE2"></TextBox>
-        <TextBox Name="B17" Grid.Row="1" Grid.Column="7" Background="#FF37BAE2"></TextBox>
+        <TextBox IsReadOnly="True" Text="8" FontSize="50" Name="B16" Grid.Row="1" Grid.Column="6" Background="#FF37BAE2"></TextBox>
+        <TextBox IsReadOnly="True" Text="2" FontSize="50" Name="B17" Grid.Row="1" Grid.Column="7" Background="#FF37BAE2"></TextBox>
         <TextBox Name="B18" Grid.Row="1" Grid.Column="8" Background="#FF37BAE2"></TextBox>
         <TextBox Name="B19" Grid.Row="2" Grid.Column="0" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B20" Grid.Row="2" Grid.Column="1" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B21" Grid.Row="2" Grid.Column="2" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B22" Grid.Row="2" Grid.Column="3" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B23" Grid.Row="2" Grid.Column="4" Background="#FF5AC9EB"></TextBox>
-        <TextBox Name="B24" Grid.Row="2" Grid.Column="5" Background="#FF5AC9EB"></TextBox>
+        <TextBox IsReadOnly="True" Text="7" FontSize="50" Name="B24" Grid.Row="2" Grid.Column="5" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B25" Grid.Row="2" Grid.Column="6" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B26" Grid.Row="2" Grid.Column="7" Background="#FF5AC9EB"></TextBox>
-        <TextBox Name="B27" Grid.Row="2" Grid.Column="8" Background="#FF5AC9EB"></TextBox>
+        <TextBox IsReadOnly="True" Text="9" FontSize="50" Name="B27" Grid.Row="2" Grid.Column="8" Background="#FF5AC9EB"></TextBox>
         <TextBox Name="B28" Grid.Row="3" Grid.Column="0" Background="#FF6684EB"></TextBox>
         <TextBox Name="B29" Grid.Row="3" Grid.Column="1" Background="#FF6684EB"></TextBox>
         <TextBox Name="B30" Grid.Row="3" Grid.Column="2" Background="#FF6684EB"></TextBox>
         <TextBox Name="B31" Grid.Row="3" Grid.Column="3" Background="#FF6684EB"></TextBox>
         <TextBox Name="B32" Grid.Row="3" Grid.Column="4" Background="#FF6684EB"></TextBox>
-        <TextBox Name="B33" Grid.Row="3" Grid.Column="5" Background="#FF6684EB"></TextBox>
+        <TextBox IsReadOnly="True" Text="3" FontSize="50" Name="B33" Grid.Row="3" Grid.Column="5" Background="#FF6684EB"></TextBox>
         <TextBox Name="B34" Grid.Row="3" Grid.Column="6" Background="#FF6684EB"></TextBox>
         <TextBox Name="B35" Grid.Row="3" Grid.Column="7" Background="#FF6684EB"></TextBox>
-        <TextBox Name="B36" Grid.Row="3" Grid.Column="8" Background="#FF6684EB"></TextBox>
+        <TextBox IsReadOnly="True" Text="6" FontSize="50" Name="B36" Grid.Row="3" Grid.Column="8" Background="#FF6684EB"></TextBox>
         <TextBox Name="B37" Grid.Row="4" Grid.Column="0" Background="#FF7994F0"></TextBox>
-        <TextBox Name="B38" Grid.Row="4" Grid.Column="1" Background="#FF7994F0"></TextBox>
-        <TextBox Name="B39" Grid.Row="4" Grid.Column="2" Background="#FF7994F0"></TextBox>
+        <TextBox IsReadOnly="True" Text="7" FontSize="50" Name="B38" Grid.Row="4" Grid.Column="1" Background="#FF7994F0"></TextBox>
+        <TextBox IsReadOnly="True" Text="4" FontSize="50" Name="B39" Grid.Row="4" Grid.Column="2" Background="#FF7994F0" Grid.ColumnSpan="2" Margin="2.2,0.4,64.6,67" Grid.RowSpan="2"></TextBox>
         <TextBox Name="B40" Grid.Row="4" Grid.Column="3" Background="#FF7994F0"></TextBox>
         <TextBox Name="B41" Grid.Row="4" Grid.Column="4" Background="#FF7994F0"></TextBox>
         <TextBox Name="B42" Grid.Row="4" Grid.Column="5" Background="#FF7994F0"></TextBox>
-        <TextBox Name="B43" Grid.Row="4" Grid.Column="6" Background="#FF7994F0"></TextBox>
-        <TextBox Name="B44" Grid.Row="4" Grid.Column="7" Background="#FF7994F0"></TextBox>
+        <TextBox IsReadOnly="True" Text="9" FontSize="50" Name="B43" Grid.Row="4" Grid.Column="6" Background="#FF7994F0" Grid.ColumnSpan="2" Margin="2,0.4,65.6,67" Grid.RowSpan="2"></TextBox>
+        <TextBox IsReadOnly="True" Text="1" FontSize="50" Name="B44" Grid.Row="4" Grid.Column="7" Background="#FF7994F0"></TextBox>
         <TextBox Name="B45" Grid.Row="4" Grid.Column="8" Background="#FF7994F0"></TextBox>
-        <TextBox Name="B46" Grid.Row="5" Grid.Column="0" Background="#FF8CA5FA"></TextBox>
+        <TextBox IsReadOnly="True" Text="2" FontSize="50" Name="B46" Grid.Row="5" Grid.Column="0" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B47" Grid.Row="5" Grid.Column="1" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B48" Grid.Row="5" Grid.Column="2" Background="#FF8CA5FA"></TextBox>
-        <TextBox Name="B49" Grid.Row="5" Grid.Column="3" Background="#FF8CA5FA"></TextBox>
+        <TextBox IsReadOnly="True" Text="5" FontSize="50" Name="B49" Grid.Row="5" Grid.Column="3" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B50" Grid.Row="5" Grid.Column="4" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B51" Grid.Row="5" Grid.Column="5" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B52" Grid.Row="5" Grid.Column="6" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B53" Grid.Row="5" Grid.Column="7" Background="#FF8CA5FA"></TextBox>
         <TextBox Name="B54" Grid.Row="5" Grid.Column="8" Background="#FF8CA5FA"></TextBox>
-        <TextBox Name="B55" Grid.Row="6" Grid.Column="0" Background="#FF844AB9"></TextBox>
+        <TextBox IsReadOnly="True" Text="7" FontSize="50" Name="B55" Grid.Row="6" Grid.Column="0" Background="#FF844AB9"></TextBox>
         <TextBox Name="B56" Grid.Row="6" Grid.Column="1" Background="#FF844AB9"></TextBox>
         <TextBox Name="B57" Grid.Row="6" Grid.Column="2" Background="#FF844AB9"></TextBox>
-        <TextBox Name="B58" Grid.Row="6" Grid.Column="3" Background="#FF844AB9"></TextBox>
+        <TextBox IsReadOnly="True" Text="6" FontSize="50" Name="B58" Grid.Row="6" Grid.Column="3" Background="#FF844AB9"></TextBox>
         <TextBox Name="B59" Grid.Row="6" Grid.Column="4" Background="#FF844AB9"></TextBox>
         <TextBox Name="B60" Grid.Row="6" Grid.Column="5" Background="#FF844AB9"></TextBox>
         <TextBox Name="B61" Grid.Row="6" Grid.Column="6" Background="#FF844AB9"></TextBox>
         <TextBox Name="B62" Grid.Row="6" Grid.Column="7" Background="#FF844AB9"></TextBox>
         <TextBox Name="B63" Grid.Row="6" Grid.Column="8" Background="#FF844AB9"></TextBox>
         <TextBox Name="B64" Grid.Row="7" Grid.Column="0" Background="#FF8E64B4"></TextBox>
-        <TextBox Name="B65" Grid.Row="7" Grid.Column="1" Background="#FF8E64B4"></TextBox>
-        <TextBox Name="B66" Grid.Row="7" Grid.Column="2" Background="#FF8E64B4"></TextBox>
+        <TextBox IsReadOnly="True" Text="8" FontSize="50" Name="B65" Grid.Row="7" Grid.Column="1" Background="#FF8E64B4"></TextBox>
+        <TextBox IsReadOnly="True" Text="3" FontSize="50" Name="B66" Grid.Row="7" Grid.Column="2" Background="#FF8E64B4"></TextBox>
         <TextBox Name="B67" Grid.Row="7" Grid.Column="3" Background="#FF8E64B4"></TextBox>
         <TextBox Name="B68" Grid.Row="7" Grid.Column="4" Background="#FF8E64B4"></TextBox>
         <TextBox Name="B69" Grid.Row="7" Grid.Column="5" Background="#FF8E64B4"></TextBox>
-        <TextBox Name="B70" Grid.Row="7" Grid.Column="6" Background="#FF8E64B4"></TextBox>
-        <TextBox Name="B71" Grid.Row="7" Grid.Column="7" Background="#FF8E64B4"></TextBox>
+        <TextBox IsReadOnly="True" Text="5" FontSize="50" Name="B70" Grid.Row="7" Grid.Column="6" Background="#FF8E64B4"></TextBox>
+        <TextBox IsReadOnly="True" Text="7" FontSize="50" Name="B71" Grid.Row="7" Grid.Column="7" Background="#FF8E64B4"></TextBox>
         <TextBox Name="B72" Grid.Row="7" Grid.Column="8" Background="#FF8E64B4"></TextBox>
         <TextBox Name="B73" Grid.Row="8" Grid.Column="0" Background="#FFA581C5"></TextBox>
         <TextBox Name="B74" Grid.Row="8" Grid.Column="1" Background="#FFA581C5"></TextBox>
         <TextBox Name="B75" Grid.Row="8" Grid.Column="2" Background="#FFA581C5"></TextBox>
         <TextBox Name="B76" Grid.Row="8" Grid.Column="3" Background="#FFA581C5"></TextBox>
         <TextBox Name="B77" Grid.Row="8" Grid.Column="4" Background="#FFA581C5"></TextBox>
-        <TextBox Name="B78" Grid.Row="8" Grid.Column="5" Background="#FFA581C5"></TextBox>
+        <TextBox Text="4" FontSize="50" Name="B78" Grid.Row="8" Grid.Column="5" Background="#FFA581C5"></TextBox>
         <TextBox Name="B79" Grid.Row="8" Grid.Column="6" Background="#FFA581C5"></TextBox>
         <TextBox Name="B80" Grid.Row="8" Grid.Column="7" Background="#FFA581C5"></TextBox>
-        <TextBox Name="B81" Grid.Row="8" Grid.Column="8" Background="#FFA581C5"></TextBox>
+        <TextBox IsReadOnly="True" Text="1" FontSize="50" Name="B81" Grid.Row="8" Grid.Column="8" Background="#FFA581C5"></TextBox>
     </Grid>
 
 </Window>

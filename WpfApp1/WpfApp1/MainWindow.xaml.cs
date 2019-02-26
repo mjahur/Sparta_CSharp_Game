@@ -23,34 +23,13 @@ namespace WpfApp1
         NumberAssignment NA = new NumberAssignment();
         public MainWindow()
         {
-            NumberAssignment NA = new NumberAssignment();
-            NA.callPerm1();
-
             InitializeComponent();
-            for (int i = 0; i < NA.callPerm1().Count; i++)
-            {
-                int x = i
             }
-        }
-
-        private void B_1_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        
+        private void B1_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-
-        }
-
-        private void B_9_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
-        private void T_1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
+            B1.Text = "5";
         }
     }
-}
+   
+    }
