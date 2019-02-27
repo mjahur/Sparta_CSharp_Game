@@ -69,15 +69,15 @@ namespace WpfApp1
             {
                 for (int i = x; i < x + 3; i++)
                 {
-                    for (int j = y; j < y + 3; i++)
+                    for (int j = y; j < y + 3; j++)
                     {
-                       
+                        if(SudokuArray[r,c] == SudokuArray[i, j])
+                        {
+                            getGridChild(r, c).Background = Brushes.Red;
+                            getGridChild(i, j).Background = Brushes.Red;
+                        }
                     }
                 }
-            }
-            else
-            {
-                
             }
             
         }
@@ -125,8 +125,37 @@ namespace WpfApp1
                                     getGridChild(r, i).Background = Brushes.Red;
                                    
                                 }
-                      
                     }
+                    //Highlight repeats in box and disable all else.
+                    int k;
+                    int l;
+                    if (r==0 || r== 1 || r==2)
+                    {
+                         k = 0;
+                    }
+                    else if (r == 3 || r == 4 || r == 5)
+                    {
+                         k = 3;
+                    }
+                    else
+                    {
+                         k = 6;
+                    }
+
+                    if (c == 0 || c == 1 || c == 2)
+                    {
+                         l = 0;
+                    }
+                    else if (c == 3 || c == 4 || c == 5)
+                    {
+                         l = 3;
+                    }
+                    else
+                    {
+                         l = 6;
+                    }
+                    LoopThroughChosenBox(r, c, k, l);
+
                     if (button.Background == Brushes.Red)
                     {
                         foreach (Button item in SudokuGrid.Children)
@@ -139,9 +168,7 @@ namespace WpfApp1
                         }
                     }
 
-                    //Highlight repeats in box and disable all else.
-                    //indices  loops 1 j= 3  rows: 0,1,2 columns 0,1,2
-                    //0,1,2 3,4,5,
+                    
                  
                 }
 
