@@ -71,7 +71,7 @@ namespace WpfApp1
                 {
                     for (int j = y; j < y + 3; j++)
                     {
-                        if(SudokuArray[r,c] == SudokuArray[i, j])
+                        if(SudokuArray[r,c] == SudokuArray[i, j] & r != i & c != j)
                         {
                             getGridChild(r, c).Background = Brushes.Red;
                             getGridChild(i, j).Background = Brushes.Red;

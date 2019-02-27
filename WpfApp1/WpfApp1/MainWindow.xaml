@@ -81,7 +81,7 @@
         <Button   FontSize="50" Grid.Row="5" Grid.Column="3" BorderBrush="Blue" BorderThickness="1" Background="LightSteelBlue"></Button>
         <Button FontSize="50" Grid.Row="5" Grid.Column="4" BorderBrush="Blue" BorderThickness="1" Click="Button_Click_33" Background="LightSteelBlue"></Button>
         <Button FontSize="50" Grid.Row="5" Grid.Column="5" BorderBrush="Blue" BorderThickness="1" Click="Button_Click_34" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="6" BorderBrush="Blue" BorderThickness="1" Margin="0,0.2,0.4,0" Click="Button_Click_35" Background="LightSteelBlue"/>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="6" BorderBrush="Blue" BorderThickness="1" Click="Button_Click_35" Background="LightSteelBlue" Margin="0,0.2,0.4,0"/>
         <Button FontSize="50" Grid.Row="5" Grid.Column="7" BorderBrush="Blue" BorderThickness="1" Click="Button_Click_36" Background="LightSteelBlue"></Button>
         <Button FontSize="50" Grid.Row="5" Grid.Column="8" BorderBrush="Blue" BorderThickness="1" Click="Button_Click_37" Background="LightSteelBlue"></Button>
         <Button   FontSize="50" Grid.Row="6" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Background="LightSteelBlue"></Button>
