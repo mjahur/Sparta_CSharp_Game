@@ -37,9 +37,9 @@ namespace WpfApp1
 
         public Button getGridChild(int r, int c)
         {
-            for (int i = 0; i < SudokuGrid.Children.Count; i++)
+            for (int i = 0; i < this.SudokuGrid.Children.Count; i++)
             {
-                Button e = (Button) SudokuGrid.Children[i];
+                Button e = (Button) this.SudokuGrid.Children[i];
                 if (Grid.GetRow(e) == r && Grid.GetColumn(e) == c)
                     return e;
             }
@@ -54,28 +54,7 @@ namespace WpfApp1
                 {
                      if (SudokuArray[i,j] != 0)
                     {
-                        getGridChild(i, j).Content = SudokuArray[i, j];
-                    }
-                }
-            }
-        }
-
-        public void SubGridValidity()
-        {
-            foreach (var item in this.SudokuGrid.Children)
-            {
-                Grid subgrid = (Grid)item;
-                for (int i = 0; i < subgrid.Children.Count; i++)
-                {
-                    TextBox e = (TextBox)subgrid.Children[i];
-                    for (int j = 0; j < subgrid.Children.Count; j++)
-                    {
-                        TextBox f = (TextBox)subgrid.Children[j];
-
-                        if (f != e && f.Text == e.Text)
-                        {
-                            e.Text = null;
-                        }
+                        getGridChild(i,j).Content = SudokuArray[i, j];
                     }
                 }
             }
@@ -84,17 +63,93 @@ namespace WpfApp1
         public void UserInput(object sender)
         {
             var button = (Button)sender;
-
-            string x = Interaction.InputBox("Choice", "Enter choice", null);
-            if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9")
+            string x = Interaction.InputBox("Enter choice (enter 0 to clear)","Choice", null);
+            if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9" || x == "0")
             {
-                button.Background = Brushes.Blue;
-                button.Content = Int32.Parse(x);
+                foreach (Button item in SudokuGrid.Children)
+                {
+                    item.Background = Brushes.LightSteelBlue;
+                }
+                foreach (Button item in SudokuGrid.Children)
+                {
+                    item.IsEnabled = true;
+                }
+                if (x == "0")
+                {
+                    button.Content = null;
+                }
+                else
+                {//Assign value entered by user
+                    button.Content = Int32.Parse(x);
+                    //Update Array with new value
+                    int r = Grid.GetRow(button);
+                    int c = Grid.GetColumn(button);
+                    SudokuArray[r, c] = Int32.Parse(x);
+                    //Highlight repeats and disable all else.
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (SudokuArray[i, c] == SudokuArray[r, c] && i != r && SudokuArray[r, i] == SudokuArray[r, c] && i != c)
+                        {
+                            button.Background = Brushes.Red;
+                            getGridChild(r, i).Background = Brushes.Red;
+                            getGridChild(i, c).Background = Brushes.Red;
+                            foreach (Button item in SudokuGrid.Children)
+                            {
+                                if (item != button && item != getGridChild(r, i) && item != getGridChild(i, c))
+                                {
+                                    item.IsEnabled = false;
+                                }
+                            }
+                        }
+                        else if ((SudokuArray[i, c] == SudokuArray[r, c] && i != r) && !(SudokuArray[r, i] == SudokuArray[r, c] && i != c))
+                        {
+                            button.Background = Brushes.Red;
+                            getGridChild(i, c).Background = Brushes.Red;
+                            foreach (Button item in SudokuGrid.Children)
+                            {
+                                if (item != button && item != getGridChild(i, c))
+                                {
+                                    item.IsEnabled = false;
+                                }
+                            }
+                        }
+                        else if ((SudokuArray[r, i] == SudokuArray[r, c] && i != c) && !(SudokuArray[i, c] == SudokuArray[r, c] && i != r))
+                        {
+                            button.Background = Brushes.Red;
+                            getGridChild(r, i).Background = Brushes.Red;
+                            foreach (Button item in SudokuGrid.Children)
+                            {
+                                if (item != button && item != getGridChild(r, i))
+                                {
+                                    item.IsEnabled = false;
+                                }
+                            }
+                        }
+                       
+                
+                    }
+
+                }
+
+                //Highlight repeats
+                if (button.Background == Brushes.Red)
+                {
+                    MessageBox.Show("Repeats are highlighed, deal with them!");
+                }
+
+
+
             }
             else
             {
                 MessageBox.Show("You must enter a number between 1 and 9");
             }
+            
+        }
+
+        private void GetRow(Button button)
+        {
+            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -378,6 +433,71 @@ namespace WpfApp1
         }
 
         private void Button_Click_56(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_57(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_58(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_59(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_60(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_61(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_62(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_63(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_64(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_65(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_66(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_67(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_68(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_69(object sender, RoutedEventArgs e)
         {
             UserInput(sender);
         }
