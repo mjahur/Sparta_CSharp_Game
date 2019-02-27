@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using UserInput;
 using Microsoft.VisualBasic;
+using System.Drawing;
 
 namespace WpfApp1
 {
@@ -17,23 +18,11 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            BuildSudokuGrid();
+            BuildSudokuGrid(SudokuArray);
 
 
         }
 
-        int[,] SudokuArray = new int[9, 9]
-        {
-            {5,0,0,1,0,0,0,0,0},
-            {0,9,6,0,0,0,8,2,0},
-            {0,0,0,0,0,7,0,0,9},
-            {0,0,0,0,0,3,0,0,6},
-            {0,7,4,0,0,0,9,1,0},
-            {2,0,0,5,0,0,0,0,0},
-            {7,0,0,6,0,0,0,0,0},
-            {0,8,3,0,0,0,5,7,0},
-            {0,0,0,0,0,4,0,0,1},
-        };
 
         public Button getGridChild(int r, int c)
         {
@@ -46,15 +35,29 @@ namespace WpfApp1
             return null;
         }
 
-        public void BuildSudokuGrid()
+        int[,] SudokuArray = new int[9, 9]
+           {
+            {5,0,0,1,0,0,0,0,0},
+            {0,9,6,0,0,0,8,2,0},
+            {0,0,0,0,0,7,0,0,9},
+            {0,0,0,0,0,3,0,0,6},
+            {0,7,4,0,0,0,9,1,0},
+            {2,0,0,5,0,0,0,0,0},
+            {7,0,0,6,0,0,0,0,0},
+            {0,8,3,0,0,0,5,7,0},
+            {0,0,0,0,0,4,0,0,1},
+           };
+
+        public void BuildSudokuGrid(int[, ] array)
         {
+           
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                     if (SudokuArray[i,j] != 0)
+                     if (array[i,j] != 0)
                     {
-                        getGridChild(i,j).Content = SudokuArray[i, j];
+                        getGridChild(i,j).Content = array[i, j];
                     }
                 }
             }
@@ -63,6 +66,8 @@ namespace WpfApp1
         public void UserInput(object sender)
         {
             var button = (Button)sender;
+            int r = Grid.GetRow(button);
+            int c = Grid.GetColumn(button);
             string x = Interaction.InputBox("Enter choice (enter 0 to clear)","Choice", null);
             if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9" || x == "0")
             {
@@ -77,24 +82,25 @@ namespace WpfApp1
                 if (x == "0")
                 {
                     button.Content = null;
+                    SudokuArray[r, c] = Int32.Parse(x);
                 }
                 else
-                {//Assign value entered by user
-                    button.Content = Int32.Parse(x);
-                    //Update Array with new value
-                    int r = Grid.GetRow(button);
-                    int c = Grid.GetColumn(button);
+                {//Assign value entered by user + Update Array with new value
+                   
                     SudokuArray[r, c] = Int32.Parse(x);
-                    //Highlight repeats and disable all else.
+                    button.Content = SudokuArray[r,c];
+                    
+                    
+                    //Highlight repeats in row and columns and disable all else.
                     for (int i = 0; i < 9; i++) 
                     {
-                                if (SudokuArray[i, c] == Int32.Parse(x) && i != r)
+                                if (SudokuArray[i, c] == SudokuArray[r, c] && i != r)
                                 {
                                     button.Background = Brushes.Red;
                                     getGridChild(i, c).Background = Brushes.Red;
                                   
                                 }
-                                else if (SudokuArray[r, i] == Int32.Parse(x) && i != c)
+                                else if (SudokuArray[r, i] == SudokuArray[r, c] && i != c)
                                 {
                                     button.Background = Brushes.Red;
                                     getGridChild(r, i).Background = Brushes.Red;
@@ -113,14 +119,17 @@ namespace WpfApp1
                             }
                         }
                     }
+                    //Highlight repeats in box and disable all else.
+                    //indices  loops 1 j= 3  rows: 0,1,2 columns 0,1,2
+
                 }
-               
+
             }
             else
             {
                 MessageBox.Show("You must enter a number between 0 and 9");
             }
-            
+
         }
 
         private void GetRow(Button button)
@@ -476,6 +485,11 @@ namespace WpfApp1
         private void Button_Click_69(object sender, RoutedEventArgs e)
         {
             UserInput(sender);
+        }
+
+        private void Button_Click_70(object sender, RoutedEventArgs e)
+        {
+          
         }
     }
    
