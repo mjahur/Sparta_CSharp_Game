@@ -86,63 +86,39 @@ namespace WpfApp1
                     int c = Grid.GetColumn(button);
                     SudokuArray[r, c] = Int32.Parse(x);
                     //Highlight repeats and disable all else.
-                    for (int i = 0; i < 9; i++)
+                    for (int i = 0; i < 9; i++) 
                     {
-                        if (SudokuArray[i, c] == SudokuArray[r, c] && i != r && SudokuArray[r, i] == SudokuArray[r, c] && i != c)
-                        {
-                            button.Background = Brushes.Red;
-                            getGridChild(r, i).Background = Brushes.Red;
-                            getGridChild(i, c).Background = Brushes.Red;
-                            foreach (Button item in SudokuGrid.Children)
-                            {
-                                if (item != button && item != getGridChild(r, i) && item != getGridChild(i, c))
+                                if (SudokuArray[i, c] == Int32.Parse(x) && i != r)
                                 {
-                                    item.IsEnabled = false;
+                                    button.Background = Brushes.Red;
+                                    getGridChild(i, c).Background = Brushes.Red;
+                                  
                                 }
-                            }
-                        }
-                        else if ((SudokuArray[i, c] == SudokuArray[r, c] && i != r) && !(SudokuArray[r, i] == SudokuArray[r, c] && i != c))
-                        {
-                            button.Background = Brushes.Red;
-                            getGridChild(i, c).Background = Brushes.Red;
-                            foreach (Button item in SudokuGrid.Children)
-                            {
-                                if (item != button && item != getGridChild(i, c))
+                                else if (SudokuArray[r, i] == Int32.Parse(x) && i != c)
                                 {
-                                    item.IsEnabled = false;
+                                    button.Background = Brushes.Red;
+                                    getGridChild(r, i).Background = Brushes.Red;
+                                   
                                 }
-                            }
-                        }
-                        else if ((SudokuArray[r, i] == SudokuArray[r, c] && i != c) && !(SudokuArray[i, c] == SudokuArray[r, c] && i != r))
-                        {
-                            button.Background = Brushes.Red;
-                            getGridChild(r, i).Background = Brushes.Red;
-                            foreach (Button item in SudokuGrid.Children)
-                            {
-                                if (item != button && item != getGridChild(r, i))
-                                {
-                                    item.IsEnabled = false;
-                                }
-                            }
-                        }
-                       
-                
+                      
                     }
+                    if (button.Background == Brushes.Red)
+                    {
+                        foreach (Button item in SudokuGrid.Children)
+                        {
 
+                            if (getGridChild(Grid.GetRow(item), Grid.GetColumn(item)).Background == Brushes.LightSteelBlue)
+                            {
+                                item.IsEnabled = false;
+                            }
+                        }
+                    }
                 }
-
-                //Highlight repeats
-                if (button.Background == Brushes.Red)
-                {
-                    MessageBox.Show("Repeats are highlighed, deal with them!");
-                }
-
-
-
+               
             }
             else
             {
-                MessageBox.Show("You must enter a number between 1 and 9");
+                MessageBox.Show("You must enter a number between 0 and 9");
             }
             
         }
