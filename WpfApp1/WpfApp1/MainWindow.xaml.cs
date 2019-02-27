@@ -50,7 +50,6 @@ namespace WpfApp1
 
         public void BuildSudokuGrid(int[, ] array)
         {
-           
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -58,9 +57,29 @@ namespace WpfApp1
                      if (array[i,j] != 0)
                     {
                         getGridChild(i,j).Content = array[i, j];
+                        getGridChild(i, j).Foreground = Brushes.AliceBlue;
                     }
                 }
             }
+        }
+
+        public void LoopThroughChosenBox(int r, int c, int x, int y)
+        { 
+            if ((x == 0|| x == 3 || x == 6 ) && (y == 0 || y == 3 || y == 6))
+            {
+                for (int i = x; i < x + 3; i++)
+                {
+                    for (int j = y; j < y + 3; i++)
+                    {
+                       
+                    }
+                }
+            }
+            else
+            {
+                
+            }
+            
         }
 
         public void UserInput(object sender)
@@ -119,9 +138,11 @@ namespace WpfApp1
                             }
                         }
                     }
+
                     //Highlight repeats in box and disable all else.
                     //indices  loops 1 j= 3  rows: 0,1,2 columns 0,1,2
-
+                    //0,1,2 3,4,5,
+                 
                 }
 
             }
@@ -130,11 +151,6 @@ namespace WpfApp1
                 MessageBox.Show("You must enter a number between 0 and 9");
             }
 
-        }
-
-        private void GetRow(Button button)
-        {
-            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
