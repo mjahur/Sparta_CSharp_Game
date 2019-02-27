@@ -81,30 +81,305 @@ namespace WpfApp1
             }
         }
 
-        public void UserInput()
+        public void UserInput(object sender)
         {
-            Interaction.InputBox("Select ", "Title", "Default Text");
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            HashSet<int> numbers = new HashSet<int>();
             var button = (Button)sender;
 
-            for (int i = 1; i < 10; i++)
+            string x = Interaction.InputBox("Choice", "Enter choice", null);
+            if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9")
             {
-                numbers.Add(i);
-            }
-                string x = Interaction.InputBox("Choice", "Enter choice", null);
-            if(x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9")
-            {
-                button. = Brushes.Blue;
+                button.Background = Brushes.Blue;
                 button.Content = Int32.Parse(x);
             }
             else
             {
                 MessageBox.Show("You must enter a number between 1 and 9");
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_12(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_13(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_14(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_15(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_16(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_17(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_18(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_19(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_20(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_21(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_22(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_23(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_24(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_25(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_26(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_27(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_28(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_29(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_30(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_31(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_32(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_33(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_34(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_35(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_36(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_37(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_38(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_39(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_40(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_41(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_42(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_43(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_44(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_45(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_46(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_47(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_48(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_49(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_50(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_51(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_52(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_53(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_54(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_55(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_56(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
         }
     }
    
