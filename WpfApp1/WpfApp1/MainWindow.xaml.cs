@@ -25,7 +25,7 @@ namespace WpfApp1
 
         public bool EachBoxFullfillCondition(int[,] array, int i, int j)
         {
-            if (array[i,j] != 0 && getGridChild(i,j).Background != Brushes.Red
+            if (array[i, j] != 0 && getGridChild(i, j).Background != Brushes.Red
 )
             {
                 return true;
@@ -40,27 +40,52 @@ namespace WpfApp1
         {
             for (int i = 0; i < this.SudokuGrid.Children.Count; i++)
             {
-                Button e = (Button) this.SudokuGrid.Children[i];
+                Button e = (Button)this.SudokuGrid.Children[i];
                 if (Grid.GetRow(e) == r && Grid.GetColumn(e) == c)
                     return e;
             }
             return null;
         }
 
-        /*int[,] SudokuArray = new int[9, 9]
-           {
-            {5,0,0,1,0,0,0,0,0},
-            {0,9,6,0,0,0,8,2,0},
-            {0,0,0,0,0,7,0,0,9},
-            {0,0,0,0,0,3,0,0,6},
-            {0,7,4,0,0,0,9,1,0},
-            {2,0,0,5,0,0,0,0,0},
-            {7,0,0,6,0,0,0,0,0},
-            {0,8,3,0,0,0,5,7,0},
-            {0,0,0,0,0,4,0,0,1},
-           };*/
-        int[,] SudokuArray = new int[9, 9]
+
+
+
+        /*
+         *  List<int[,]> SudokuArrayChoices = new List<int[9,9]>()
+       {
+         {
+           {5,0,0,1,0,0,0,0,0},
+           {0,9,6,0,0,0,8,2,0},
+           {0,0,0,0,0,7,0,0,9},
+           {0,0,0,0,0,3,0,0,6},
+           {0,7,4,0,0,0,9,1,0},
+           {2,0,0,5,0,0,0,0,0},
+           {7,0,0,6,0,0,0,0,0},
+           {0,8,3,0,0,0,5,7,0},
+           {0,0,0,0,0,4,0,0,1},
+        },
         {
+           {8,7,6,9,0,0,0,0,0},
+           {0,1,0,0,0,6,0,0,0},
+           {0,4,0,3,0,5,8,0,0},
+           {4,0,0,0,0,0,2,1,0},
+           {0,9,0,5,0,0,0,0,0},
+           {0,5,0,0,4,0,3,0,6},
+           {0,2,9,0,0,0,0,0,8},
+           {0,0,4,6,9,0,1,7,3},
+           {0,0,0,0,0,1,0,0,4},
+        },
+       };*/
+        /*public int[,] SudokuArray() {
+           Random rnd = new Random();
+           int x = rnd.Next(2);
+           int[,] y = SudokuArrayChoices[x];
+
+       }*/
+
+
+
+        int[,] SudokuArray = new int[9, 9]  {
             {8,7,6,9,0,0,0,0,0},
             {0,1,0,0,0,6,0,0,0},
             {0,4,0,3,0,5,8,0,0},
@@ -70,7 +95,8 @@ namespace WpfApp1
             {0,2,9,0,0,0,0,0,8},
             {0,0,4,6,9,0,1,7,3},
             {0,0,0,0,0,1,0,0,4},
-        };
+         };
+
 
         public void BuildSudokuGrid(int[, ] array)
         {
@@ -132,8 +158,8 @@ namespace WpfApp1
 
                     if (x == "0")
                     {
-                        button.Content = null;
                         SudokuArray[r, c] = Int32.Parse(x);
+                        button.Content = null;
                     }
                     else
                     {//Assign value entered by user + Update Array with new value
@@ -200,6 +226,26 @@ namespace WpfApp1
                             }
                         }
 
+                    }
+
+                    bool win = true;
+                    for (int i = 0; i < 9; i++)
+                    {
+                        for (int j = 0; j < 9; j++)
+                        {
+                            if(SudokuArray[i,j] != 0)
+                            {
+                                win = win && true;
+                            }
+                            else
+                            {
+                                win = win && false;
+                            }
+                        }
+                    }
+                    if (win == true)
+                    {
+                        MessageBox.Show("You win");
                     }
 
 

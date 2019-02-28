@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" ResizeMode="NoResize" Margin="50,0" Height="875.6" Width="708.8">
 
-    <Grid Name="SudokuGrid" HorizontalAlignment="Left" Height="600" Margin="49,53,0,0" VerticalAlignment="Top" Width="600">
+    <Grid Name="SudokuGrid" HorizontalAlignment="Left" Height="600" Margin="49,53,0,0" VerticalAlignment="Center" Width="600">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
