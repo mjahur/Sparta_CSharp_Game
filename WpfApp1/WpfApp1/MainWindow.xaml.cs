@@ -23,6 +23,18 @@ namespace WpfApp1
 
         }
 
+        public bool EachBoxFullfillCondition(int[,] array, int i, int j)
+        {
+            if (array[i,j] != 0 && getGridChild(i,j).Background != Brushes.Red
+)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public Button getGridChild(int r, int c)
         {
@@ -35,7 +47,7 @@ namespace WpfApp1
             return null;
         }
 
-        int[,] SudokuArray = new int[9, 9]
+        /*int[,] SudokuArray = new int[9, 9]
            {
             {5,0,0,1,0,0,0,0,0},
             {0,9,6,0,0,0,8,2,0},
@@ -46,7 +58,19 @@ namespace WpfApp1
             {7,0,0,6,0,0,0,0,0},
             {0,8,3,0,0,0,5,7,0},
             {0,0,0,0,0,4,0,0,1},
-           };
+           };*/
+        int[,] SudokuArray = new int[9, 9]
+        {
+            {8,7,6,9,0,0,0,0,0},
+            {0,1,0,0,0,6,0,0,0},
+            {0,4,0,3,0,5,8,0,0},
+            {4,0,0,0,0,0,2,1,0},
+            {0,9,0,5,0,0,0,0,0},
+            {0,5,0,0,4,0,3,0,6},
+            {0,2,9,0,0,0,0,0,8},
+            {0,0,4,6,9,0,1,7,3},
+            {0,0,0,0,0,1,0,0,4},
+        };
 
         public void BuildSudokuGrid(int[, ] array)
         {
@@ -56,8 +80,12 @@ namespace WpfApp1
                 {
                      if (array[i,j] != 0)
                     {
-                        getGridChild(i,j).Content = array[i, j];
-                        getGridChild(i, j).Foreground = Brushes.AliceBlue;
+                        getGridChild(i, j).Content = array[i, j];
+                        getGridChild(i, j).Foreground = Brushes.BlueViolet;
+                    }
+                     if (array[i, j] == 0)
+                    {
+                        getGridChild(i, j).Foreground = Brushes.White;
                     }
                 }
             }
@@ -87,99 +115,103 @@ namespace WpfApp1
             var button = (Button)sender;
             int r = Grid.GetRow(button);
             int c = Grid.GetColumn(button);
-            string x = Interaction.InputBox("Enter choice (enter 0 to clear)","Choice", null);
-            if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9" || x == "0")
+            if (button.Foreground != Brushes.BlueViolet)
             {
-                foreach (Button item in SudokuGrid.Children)
+                
+                string x = Interaction.InputBox("Enter choice (enter 0 to clear)", "Choice", null);
+                if (x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9" || x == "0")
                 {
-                    item.Background = Brushes.LightSteelBlue;
-                }
-                foreach (Button item in SudokuGrid.Children)
-                {
-                    item.IsEnabled = true;
-                }
-                if (x == "0")
-                {
-                    button.Content = null;
-                    SudokuArray[r, c] = Int32.Parse(x);
-                }
-                else
-                {//Assign value entered by user + Update Array with new value
-                   
-                    SudokuArray[r, c] = Int32.Parse(x);
-                    button.Content = SudokuArray[r,c];
-                    
-                    
-                    //Highlight repeats in row and columns and disable all else.
-                    for (int i = 0; i < 9; i++) 
+                    for (int i = 0; i < 9; i++)
                     {
-                                if (SudokuArray[i, c] == SudokuArray[r, c] && i != r)
-                                {
-                                    button.Background = Brushes.Red;
-                                    getGridChild(i, c).Background = Brushes.Red;
-                                  
-                                }
-                                else if (SudokuArray[r, i] == SudokuArray[r, c] && i != c)
-                                {
-                                    button.Background = Brushes.Red;
-                                    getGridChild(r, i).Background = Brushes.Red;
-                                   
-                                }
-                    }
-                    //Highlight repeats in box and disable all else.
-                    int k;
-                    int l;
-                    if (r==0 || r== 1 || r==2)
-                    {
-                         k = 0;
-                    }
-                    else if (r == 3 || r == 4 || r == 5)
-                    {
-                         k = 3;
-                    }
-                    else
-                    {
-                         k = 6;
-                    }
-
-                    if (c == 0 || c == 1 || c == 2)
-                    {
-                         l = 0;
-                    }
-                    else if (c == 3 || c == 4 || c == 5)
-                    {
-                         l = 3;
-                    }
-                    else
-                    {
-                         l = 6;
-                    }
-                    LoopThroughChosenBox(r, c, k, l);
-
-                    if (button.Background == Brushes.Red)
-                    {
-                        foreach (Button item in SudokuGrid.Children)
+                        for (int j = 0; j < 9; j++)
                         {
-
-                            if (getGridChild(Grid.GetRow(item), Grid.GetColumn(item)).Background == Brushes.LightSteelBlue)
-                            {
-                                item.IsEnabled = false;
-                            }
+                            getGridChild(i, j).Background = Brushes.LightSteelBlue;
+                            getGridChild(i, j).IsEnabled = true;
                         }
                     }
 
-                    
-                 
-                }
+                    if (x == "0")
+                    {
+                        button.Content = null;
+                        SudokuArray[r, c] = Int32.Parse(x);
+                    }
+                    else
+                    {//Assign value entered by user + Update Array with new value
 
-            }
-            else
-            {
-                MessageBox.Show("You must enter a number between 0 and 9");
+                        SudokuArray[r, c] = Int32.Parse(x);
+                        button.Content = SudokuArray[r, c];
+
+
+                        //Highlight repeats in row and columns and disable all else.
+                        for (int i = 0; i < 9; i++)
+                        {
+                            if (SudokuArray[i, c] == SudokuArray[r, c] && i != r)
+                            {
+                                button.Background = Brushes.Red;
+                                getGridChild(i, c).Background = Brushes.Red;
+
+                            }
+                            if (SudokuArray[r, i] == SudokuArray[r, c] && i != c)
+                            {
+                                button.Background = Brushes.Red;
+                                getGridChild(r, i).Background = Brushes.Red;
+
+                            }
+                        }
+                        //Highlight repeats in box and disable all else.
+                        int k;
+                        int l;
+                        if (r == 0 || r == 1 || r == 2)
+                        {
+                            k = 0;
+                        }
+                        else if (r == 3 || r == 4 || r == 5)
+                        {
+                            k = 3;
+                        }
+                        else
+                        {
+                            k = 6;
+                        }
+
+                        if (c == 0 || c == 1 || c == 2)
+                        {
+                            l = 0;
+                        }
+                        else if (c == 3 || c == 4 || c == 5)
+                        {
+                            l = 3;
+                        }
+                        else
+                        {
+                            l = 6;
+                        }
+                        LoopThroughChosenBox(r, c, k, l);
+
+                        if (button.Background == Brushes.Red)
+                        {
+                            foreach (Button item in SudokuGrid.Children)
+                            {
+
+                                if (getGridChild(Grid.GetRow(item), Grid.GetColumn(item)).Background == Brushes.LightSteelBlue)
+                                {
+                                    item.IsEnabled = false;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("You must enter a number between 0 and 9");
+                }
             }
 
         }
-
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             UserInput(sender);
@@ -467,7 +499,7 @@ namespace WpfApp1
 
         private void Button_Click_57(object sender, RoutedEventArgs e)
         {
-            
+            UserInput(sender);
         }
 
         private void Button_Click_58(object sender, RoutedEventArgs e)
@@ -532,7 +564,121 @@ namespace WpfApp1
 
         private void Button_Click_70(object sender, RoutedEventArgs e)
         {
-          
+            UserInput(sender);
+        }
+
+        private void Button_Click_71(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_72(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_73(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_74(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_75(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_76(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_77(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_78(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_79(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_80(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_81(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_82(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_83(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_84(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_85(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_86(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_87(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_88(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_89(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_90(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_91(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_92(object sender, RoutedEventArgs e)
+        {
+            UserInput(sender);
+        }
+
+        private void Button_Click_93(object sender, RoutedEventArgs e)
+        {
         }
     }
    
