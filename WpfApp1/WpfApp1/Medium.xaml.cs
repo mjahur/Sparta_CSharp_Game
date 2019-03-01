@@ -29,21 +29,30 @@ namespace WpfApp1
             {
                 item.Click += button_Click;
             }
-             void button_Click(object sender, RoutedEventArgs e)
+            void button_Click(object sender, RoutedEventArgs e)
             {
+                bool whenToClose = true;
                 funct.UserInput(sender);
                 for (int i = 0; i < 9; i++)
                 {
                     for (int j = 0; j < 9; j++)
                     {
-                        if (funct.getGridChild(i, j).Foreground == Brushes.White)
+                        if (funct.getGridChild(i, j).Background != Brushes.Red && funct.SudokuArray[i, j] != 0)
                         {
-                            funct.getGridChild(i, j).Content = null;
-                            funct.getGridChild(i, j).Background = Brushes.LightSteelBlue;
-                            funct.getGridChild(i, j).IsEnabled = true;
-                            funct.SudokuArray[i, j] = 0;
+                            whenToClose = whenToClose && true;
+                        }
+                        else
+                        {
+                            whenToClose = whenToClose && false;
                         }
                     }
+
+                }
+                if (whenToClose == true)
+                {
+
+                    this.Close();
+
                 }
 
             }
