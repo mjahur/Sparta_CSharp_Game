@@ -111,7 +111,7 @@
         <Button FontSize="30" Grid.Row="8" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
         <Button FontSize="30" Grid.Row="8" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
         <Button FontSize="30" Grid.Row="8" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
-        <Button Grid.ColumnSpan="3" Content="Clear grid" Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="9.8,9.6,0,0" Grid.Row="9" VerticalAlignment="Top" Width="121" />
+        <Button Grid.ColumnSpan="3" Content="Clear grid" Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="9.8,9.6,0,0" Grid.Row="9" VerticalAlignment="Top" Width="121" Click="Button_Click" />
         <Button IsEnabled="False" Content="Medium" Grid.Column="3" HorizontalAlignment="Left" Height="33" Margin="23.8,-38,0,0" VerticalAlignment="Top" Width="96" Grid.ColumnSpan="3" Background="#FF150B25"  Foreground="White" FontSize="24"/>
 
     </Grid>

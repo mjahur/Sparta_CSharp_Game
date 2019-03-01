@@ -32,12 +32,25 @@ namespace WpfApp1
              void button_Click(object sender, RoutedEventArgs e)
             {
                 funct.UserInput(sender);
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (funct.getGridChild(i, j).Foreground == Brushes.White)
+                        {
+                            funct.getGridChild(i, j).Content = null;
+                            funct.getGridChild(i, j).Background = Brushes.LightSteelBlue;
+                            funct.getGridChild(i, j).IsEnabled = true;
+                            funct.SudokuArray[i, j] = 0;
+                        }
+                    }
+                }
+
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Medium medium = new Medium();
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)

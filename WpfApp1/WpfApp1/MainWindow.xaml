@@ -31,89 +31,89 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_71" Margin="0,0,0,45.2" Grid.RowSpan="2"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click_1" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_72"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_2" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_3" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="6" BorderBrush="White" BorderThickness="1" Click="Button_Click_4" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="7" BorderBrush="White" BorderThickness="1" Click="Button_Click_5" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="0" Grid.Column="8" BorderBrush="White" BorderThickness="1" Click="Button_Click_6" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click_7" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_73"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_74"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_8" Background="LightSteelBlue"/>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_9" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_10" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_75"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_76"></Button>
-        <Button FontSize="50" Grid.Row="1" Grid.Column="8" BorderBrush="White" BorderThickness="1" Click="Button_Click_11" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click_12" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click_13" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Click="Button_Click_14" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_15" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_16" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_78"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="6" BorderBrush="White" BorderThickness="1" Click="Button_Click_17" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="7" BorderBrush="White" BorderThickness="1" Click="Button_Click_18" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="2" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_77"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_19" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_20" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_21" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="3" BorderBrush="White" BorderThickness="1" Click="Button_Click_22" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="4" BorderBrush="White" BorderThickness="1" Click="Button_Click_23" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="5" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_79"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_24" Background="LightSteelBlue"/>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_25" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="3" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_80"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_26" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_84"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_85"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="3" BorderBrush="White" BorderThickness="1" Click="Button_Click_27" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="4" BorderBrush="White" BorderThickness="1" Click="Button_Click_28" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="5" BorderBrush="White" BorderThickness="1" Click="Button_Click_29" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_83"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_81"></Button>
-        <Button FontSize="50" Grid.Row="4" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_30" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_86"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_31" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_32" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="3" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_87"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="4" BorderBrush="White" BorderThickness="1" Click="Button_Click_33" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="5" BorderBrush="White" BorderThickness="1" Click="Button_Click_34" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_35" Background="LightSteelBlue"/>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_36" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="5" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_37" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="0" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_91"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="1" BorderBrush="White" BorderThickness="1" Click="Button_Click_38" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="2" BorderBrush="White" BorderThickness="1" Click="Button_Click_39" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_92"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_40" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Click="Button_Click_41" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="6" BorderBrush="White" BorderThickness="1" Click="Button_Click_42" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="7" BorderBrush="White" BorderThickness="1" Click="Button_Click_43" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="6" Grid.Column="8" BorderBrush="White" BorderThickness="1" Click="Button_Click_44" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="0" BorderBrush="White" BorderThickness="1" Click="Button_Click_45" Background="LightSteelBlue"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="1" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_57"/>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="2" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_88"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_58"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_59"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_60"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_89"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_90"></Button>
-        <Button FontSize="50" Grid.Row="7" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_61"></Button>
-        <Button FontSize="50" Grid.Row="8" Grid.Column="0" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_62"></Button>
-        <Button FontSize="50" Grid.Row="8" Grid.Column="1" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_63"></Button>
-        <Button FontSize="50" Grid.Row="8" Grid.Column="2" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_64"/>
-        <Button FontSize="50" Grid.Row="8" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_65"></Button>
-        <Button FontSize="50" Grid.Row="8" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_66"></Button>
-        <Button FontSize="30" Grid.Row="8" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_67"/>
-        <Button FontSize="30" Grid.Row="8" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_67"></Button>
-        <Button FontSize="30" Grid.Row="8" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_68"/>
-        <Button FontSize="30" Grid.Row="8" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" Click="Button_Click_69"/>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue" Margin="0,0,0,45.2" Grid.RowSpan="2"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="6" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="7" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="0" Grid.Column="8" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"/>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="1" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="0" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="1" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="2" BorderBrush="#FFF9F9F9" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="2" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="3" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="4" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="5" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"/>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="3" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1" ></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="3" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="4" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="5" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="4" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="0" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="1" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="2" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="3" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="4" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="5" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="6" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"/>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="7" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="5" Grid.Column="8" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="0" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="1" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="2" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="6" BorderBrush="White" BorderThickness="1"  Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="6" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="0" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="1" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
+        <Button FontSize="50" Grid.Row="7" Grid.Column="2" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="7" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="8" Grid.Column="0" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="8" Grid.Column="1" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="8" Grid.Column="2" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
+        <Button FontSize="50" Grid.Row="8" Grid.Column="3" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="50" Grid.Row="8" Grid.Column="4" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="30" Grid.Row="8" Grid.Column="5" BorderBrush="BlueViolet" BorderThickness="1" Background="LightSteelBlue"/>
+        <Button FontSize="30" Grid.Row="8" Grid.Column="6" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" ></Button>
+        <Button FontSize="30" Grid.Row="8" Grid.Column="7" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
+        <Button FontSize="30" Grid.Row="8" Grid.Column="8" BorderBrush="White" BorderThickness="1" Background="LightSteelBlue" />
         <Button Grid.ColumnSpan="3" Content="Clear grid" Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="9.8,9.6,0,0" Grid.Row="9" VerticalAlignment="Top" Width="121" Click="Button_Click_95"/>
-        <Button IsEnabled="False" Content="EASY" Grid.Column="3" HorizontalAlignment="Left" Height="33" Margin="42.8,-38,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_96" Grid.ColumnSpan="3" Background="#FF150B25"  Foreground="White" FontSize="24"/>
+        <Button IsEnabled="False" Content="EASY" Grid.Column="3" HorizontalAlignment="Left" Height="33" Margin="42.8,-38,0,0" VerticalAlignment="Top" Width="63" Grid.ColumnSpan="3" Background="#FF150B25"  Foreground="White" FontSize="24"/>
 
     </Grid>
 </Window>
