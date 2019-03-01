@@ -13,3 +13,7 @@ C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\o
 C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Sudoku.csproj.GenerateResource.cache
 C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Sudoku.csproj.CoreCompileInputs.cache
 C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Sudoku.csprojAssemblyReference.cache
+C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Medium.g.cs
+C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Medium.baml
+C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Hard.g.cs
+C:\Users\Tech-W96a\Engineering26\week7\Day1\Sparta_CSharp_Game\WpfApp1\WpfApp1\obj\Debug\Hard.baml

@@ -491,6 +491,39 @@ namespace WpfApp1
         private void Button_Click_93(object sender, RoutedEventArgs e)
         {
         }
+
+        private void Button_Click_95(object sender, RoutedEventArgs e)
+        {
+            Medium medium = new Medium();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (funct.getGridChild(i,j).Foreground == Brushes.White)
+                    {
+                        funct.getGridChild(i, j).Content = null;
+                        funct.getGridChild(i, j).Background = Brushes.LightSteelBlue;
+                        funct.getGridChild(i, j).IsEnabled = true;
+                        funct.SudokuArray[i, j] = 0;
+                    }
+                }
+            }
+            if(System.Windows.Application.Current.Windows.Count > 1)
+            {
+                this.Visibility = Visibility.Hidden;
+            }
+
+        }
+
+        private void Button_Click_94(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_96(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
    
 }

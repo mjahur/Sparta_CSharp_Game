@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,18 +10,15 @@ using System.Windows.Media;
 
 namespace WpfApp1
 {
-    class Functionality
+    class FunctionalityMedium
     {
         Grid gd;
-        public Functionality(Grid x)
+        public FunctionalityMedium(Grid x)
         {
             gd = x;
             SudokuArray = ChooseSudokuArray();
         }
         public int[,] SudokuArray;
-
-        public Visibility Visibility { get; private set; }
-
         public bool EachBoxFullfillCondition(int[,] array, int i, int j)
         {
             if (array[i, j] != 0 && getGridChild(i, j).Background != Brushes.Red
@@ -40,7 +36,7 @@ namespace WpfApp1
         {
             for (int i = 0; i < gd.Children.Count; i++)
             {
-                Button e = (Button) gd.Children[i];
+                Button e = (Button)gd.Children[i];
                 if (Grid.GetRow(e) == r && Grid.GetColumn(e) == c)
                     return e;
             }
@@ -53,7 +49,7 @@ namespace WpfApp1
             int x = rnd.Next(5);
             if (x == 0)
             {
-                SudokuArray = new int[9,9]{
+                SudokuArray = new int[9, 9]{
                    {8,7,6,9,0,0,0,0,0},
                    {0,1,0,0,0,6,0,0,0},
                    {0,4,0,3,0,5,8,0,0},
@@ -130,10 +126,10 @@ namespace WpfApp1
             }
             return SudokuArray;
         }
-        
+
         public void BuildSudokuGrid(int[,] array)
         {
-            
+
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -177,7 +173,7 @@ namespace WpfApp1
             var button = (Button)sender;
             int r = Grid.GetRow(button);
             int c = Grid.GetColumn(button);
-            if (button.Foreground != Brushes.BlueViolet)
+            if (button.Foreground != Brushes.BlueViolet && getGridChild(Grid.GetRow(button), Grid.GetColumn(button)) != getGridChild(9,3))
             {
 
                 string x = Interaction.InputBox("Enter choice (enter 0 to clear)", "Choice", null);
@@ -255,7 +251,7 @@ namespace WpfApp1
                             foreach (Button item in gd.Children)
                             {
 
-                                if (getGridChild(Grid.GetRow(item), Grid.GetColumn(item)).Background == Brushes.LightSteelBlue && getGridChild(9,3) != getGridChild(Grid.GetRow(item), Grid.GetColumn(item)))
+                                if (getGridChild(Grid.GetRow(item), Grid.GetColumn(item)).Background == Brushes.LightSteelBlue && getGridChild(9, 3) != getGridChild(Grid.GetRow(item), Grid.GetColumn(item)))
                                 {
                                     item.IsEnabled = false;
                                 }
@@ -265,12 +261,11 @@ namespace WpfApp1
                     }
 
                     bool win = true;
-
                     for (int i = 0; i < 9; i++)
                     {
                         for (int j = 0; j < 9; j++)
                         {
-                            if (SudokuArray[i, j] != 0 && getGridChild(i,j).Background != Brushes.Red)
+                            if (SudokuArray[i, j] != 0)
                             {
                                 win = win && true;
                             }
@@ -283,9 +278,6 @@ namespace WpfApp1
                     if (win == true)
                     {
                         MessageBox.Show("You win");
-                        Medium medium = new Medium();
-                        medium.Show();
-
                     }
 
 
@@ -295,7 +287,10 @@ namespace WpfApp1
                     MessageBox.Show("You must enter a number between 0 and 9");
                 }
             }
-            
+
         }
+        
+
+        
     }
 }
